@@ -1,18 +1,44 @@
-<html>
+<html lang="">
 
 <head>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            border: 0;
+        }
+
+        .header {
+            height: 60px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 100%;
+            padding: .5rem 3rem;
+
+        }
+
+        .header button {
+            background-color: transparent;
+            padding: .5rem;
+            margin: 0 .5rem;
+        }
+
+        .header button:hover {
+            text-decoration: underline;
+        }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100%;
-            height: 100%;
+            min-height: 50vh;
+            padding: 2rem;
         }
 
         .google {
-            width: 32%;
-            min-width: 570px;
+            width: 45%;
             background-color: rgb(255, 255, 255);
             display: flex;
             justify-content: center;
@@ -28,26 +54,81 @@
 
         .google input {
             border-radius: 24px;
-            border: 1px rgb(220, 220, 220) solid;
+            border: 1px rgb(200, 200, 200) solid;
             width: 100%;
-            margin: 50px 0;
+            margin: 1rem 0;
             padding: 5px 40px;
             font-size: 16px;
             height: 44px;
-            box-shadow: 0px 0 10px 1px rgb(220, 220, 200);
+        }
+
+        .google_btns_container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .google_btns_container button {
+            min-width: 150px;
+            width: 30%;
+            padding: .5rem;
+            margin: 0 .5rem;
+            color: dimgray;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0;
+            background-color: #f2f2f2;
+            width: 100%;
+        }
+
+        footer div {
+            width: 100%;
+            padding: 1rem;
+            color: dimgray;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .google {
+                width: 100%;
+            }
         }
     </style>
+    <title>Goole</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="google">
-            <img src="googlelogo_color_272x92dp.png">
+<div class="header">
+    <button>Gmail</button>
+    <button>Images</button>
 
-            <input type="text">
+</div>
+<div class="container">
+    <div class="google">
+        <img src="googlelogo_color_272x92dp.png" alt="">
+        <input type="text">
+        <div class="google_btns_container">
+            <button>Google search</button>
+            <button>I'm feeling lucky</button>
         </div>
     </div>
 
-</body>
+</div>
 
+
+</body>
+<footer>
+    <div style="border-bottom: 1px solid whitesmoke">
+        <p style="margin: 0 10px">Palestine</p>
+    </div>
+    <div style="display: flex ; justify-content: start">
+        <a style="margin: 0 10px">About</a>
+        <a style="margin: 0 10px">Advertising</a>
+        <a style="margin: 0 10px">Business</a>
+        <a style="margin: 0 10px">How search works</a>
+    </div>
+</footer>
 </html>
